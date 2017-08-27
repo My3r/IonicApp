@@ -1,0 +1,22 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Preferencias</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doTag()">
+      <div class="list">
+
+        <ion-list ng-model="filter">
+        	<h2 class="text-center">Preferencias</h2>
+		  	<ion-checkbox ng-repeat="item in listPref" ng-model="checkItems[item.id]" ng-change="print()">
+       			{{ item.text }}
+   			</ion-checkbox>
+		</ion-list>
+
+        <label class="item">
+          <button class="button button-block button-positive" href="#/app/card">Salvar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

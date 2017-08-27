@@ -1,0 +1,28 @@
+<ion-view view-title="{{card.name}}">
+
+  <ion-content class="padding" class="text-center">
+
+    <img ng-src="{{cidade.instagram_1}}" width="200" height="200" />
+
+    <p>
+      {{cidade.nome}}
+    </p>
+    <p class="text-justify">
+      {{cidade.descricao}}
+    </p>
+    <div class="row">
+	  	<div class="col"><img ng-src="{{cidade.instagram_1}}" width="50" height="50" ng-click="showImage(1)"/></div>
+	  	<div class="col"><img ng-src="{{cidade.instagram_2}}" width="50" height="50" ng-click="showImage(2)"/></div>
+	  	<div class="col"><img ng-src="{{cidade.instagram_3}}" width="50" height="50" ng-click="showImage(3)"/></div>
+	</div>
+
+  </ion-content>
+</ion-view>
+
+<script id="image-modal.html" type="text/ng-template">
+  <div class="modal image-modal transparent" ng-click="closeModal()">
+      <ion-pane class="transparent">
+         <img ng-src="{{imageSrc}}" class="fullscreen-image"/>
+      </ion-pane>
+  </div>
+</script>

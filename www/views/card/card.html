@@ -1,0 +1,29 @@
+<ion-view view-title="MY3R">
+  <ion-pane>
+    <td-cards>
+      <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed(card.id_local)"
+            on-swipe-left="cardSwipedLeft(card.id_local)" on-swipe-right="cardSwipedRight(card.id_local)"
+            on-partial-swipe="cardPartialSwipe(amt)">
+
+        <a href="#/app/cardDetail/{{card.id_local}}">
+          <div class="image">
+            <div class="yes-text overlayBox">
+              <div class="yesBox boxed" id="centerMe">Yes</div>
+            </div>
+            <div class="no-text overlayBox">
+              <div class="noBox boxed">No</div>
+            </div>
+              <img ng-src="{{card.instagram_1}}" >
+          </div>
+        </a>
+        <div class="buttondesc">
+          <div class="username">
+            <i class="icon ion-android-contact"></i> {{card.nome}}
+          </div>
+          <button ng-click="noCard({{card.id_local}})" class="button button-assertive">Não</button>
+          <button ng-click="yesCard({{card.id_local}})" class="button button-balanced">Sim</button>
+        </div>
+      </td-card>
+    </td-cards>
+  </ion-pane>
+</ion-view>
